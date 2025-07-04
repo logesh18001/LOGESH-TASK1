@@ -1,0 +1,322 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   /* background-color: var(--bgcolor); */
+}
+
+:root {
+  --bgcolor: #FAF8ED;
+  --btn: #F66F4D;
+  --gray:#9498A4;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  
+}
+
+/* ======================navbar================ */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--bgcolor);
+  position: relative;
+
+}
+
+.logo img {
+  height: 30px;
+  position: relative;
+  left: 30px;
+}
+
+/* Navbar links */
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #111;
+ font-style: normal;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+
+.book-btn {
+  border: 2px solid var(--btn);
+  background-color: transparent;
+  color: var(--btn);
+  border-radius: 30px;
+  padding: 10px 25px;
+  cursor: pointer;
+  
+}
+
+/* Menu Icon */
+.menu {
+  display: none;
+  flex-direction: column;
+  row-gap: 5px;
+  cursor: pointer;
+}
+
+.menu-line {
+  width: 25px;
+  height: 3px;
+  background-color: #111;
+}
+
+/* Sidebar Menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--bgcolor);
+  transition: left 0.3s ease;
+  padding-top: 60px;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #111;
+  font-size: 16px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.product{
+    background-color: var(--bgcolor);
+}
+/* ===================top page==================== */
+
+.top .container h1{
+    font-size: 70px;
+    
+}
+
+.top .container .search {
+    border: none;
+    justify-content: space-around;
+    border-radius: 30px;
+padding: 10px;
+background-color: white;
+
+}
+.top .container .search .loc{
+     border-right: 1px solid var(--gray);
+     padding-right: 30px;
+ 
+}
+.top .container .search .icon{
+    height: 60px;
+    padding: 10px;
+}
+
+/* =============Experience========== */
+
+.exp h6{
+    color: var(--btn);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.exp  h1{
+    font-size: 20px;
+}
+
+.exp  .box .b1{
+    height: 120px;
+    width: 100px;
+    /* border: 1px solid black; */
+    padding: 10px 10px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    /* box-shadow: 10px 10px 10px #FFFFFF; */
+}
+
+.exp  .box .b1 h1{
+    color: var(--btn);
+}
+
+
+
+/* ======================Destination=========== */
+
+.p2{
+     border: 2px solid white;
+padding: 10px;
+border-radius: 10px;
+}
+.pri button{
+    color: white;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+/* ====================Top places============== */
+.group1{
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.group1 .btn{
+    padding: 10px;
+    width: 150px;
+    border-radius: 30px;
+    border: 1px solid black;
+}
+
+.box{
+    border: none;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+ .tour{
+    position: relative;
+    height: 100vh;
+}
+
+.t{
+    position: absolute;
+    left: 160px;
+    top: 20px;
+}
+.t1{
+    position: absolute;
+    left: 457px;
+    top: 20px;
+     
+}
+
+.t3{
+    position: absolute;
+    left: 157px;
+    top: 290px;
+   
+}
+
+
+.t4{
+    position: absolute;
+    left: 840px;
+    top: 280px;
+}
+
+.t5{
+    position: absolute;
+    left: 1020px;
+    top: 280px;
+    width: 150px;
+}
+
+.t2{
+    position: absolute;
+    left: 840px;
+    top: 20px;
+    width: 330px;
+}
+
+
+/* ===================newsletter=============== */
+
+.newsletter{
+   
+    background-image: url(./img/newsletter.jpeg);
+    background-position: center;
+    background-size: cover;
+    height: 250px;
+}
+
+.foot ul li{
+ list-style: none;
+ padding-bottom: 10px;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+   
+  nav .navbar {
+    display: none;
+  }
+
+   nav button{
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+ .sidebar button{
+  margin: 20px;
+ }
+
+
+ .tour {
+    position: static;
+    height: 100%;
+  }
+
+  .t {
+    position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .t1{
+     position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .t2{
+     position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .t3{
+     position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .t4{
+     position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+  .t5{
+     position: static;
+    margin-top: 20px;
+    margin-left: 10px;
+  }
+
+}
